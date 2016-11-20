@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #image {
+            width: 99px;
+           position: absolute;
+           top:0;
+           left: 0;
+        }
+    </style>
+   
+</head>
+<body>
+    <img src="img/img.jpg" alt="" id="image"/>
+
+     <script type="text/javascript">
+        document.onmousemove = imageFlying;
+        function imageFlying(){
+            var btn = document.getElementById("image");
+            if(!btn){
+                return;
+            }
+
+            var intX = window.event.clientX;
+            var intY = window.event.clientY;
+            //console.log(intX+'**'+intY);
+            image.style.left = intX + "px";
+            image.style.top = intY + "px";
+        }
+    </script>
+</body>
+</html>
